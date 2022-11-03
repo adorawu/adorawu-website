@@ -1,0 +1,100 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0px;
+  background-color: #CEBFAE;
+}
+
+@font-face {
+  font-family: "La Obrige";
+  src: url("La\ Obrige.otf") format("opentype");
+}
+
+h1 {
+  font-family: "La Obrige";
+  color: #F4F4EE;
+  font-size: 64px;
+  margin: 0;
+}
+
+h2 {
+  font-family: "La Obrige";
+  color: #F4F4EE;
+  font-size: 36px;
+  margin: 8px 0px;
+}
+
+p {
+  color: #F4F4EE;
+  font-weight: bold;
+  font-size: 18px;
+  margin: 0;
+}
+
+/* NavBar */
+.right {
+  display: flex;
+  justify-content: flex-end;
+  margin: 0px 32px;
+}
+.navbar {
+  display: flex;
+  background-color: #CEBFAE;
+  color: #F4F4EE;
+  align-items: center;
+  padding: 16px 24px;
+  max-height: 56px;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.nav {
+  text-decoration: none;
+  color: #F4F4EE;
+  font-size: 24px;
+  font-weight: bold;
+  padding: 16px;
+}
+
+/* Landing Page */
+.landing {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 200px 256px 200px 256px;
+}
+
+/* About me */
+.about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 56px 0px 128px 0px;
+}
+.about-text {
+  display: flex;
+  flex-direction: column;
+  max-width: 350px;
+  padding: 16px 16px;
+}
+.newyork {
+  height: 400px;
+  padding: 40px 16px;
+}
+
+/* Projects */
+
+.projects {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 200px;
+}

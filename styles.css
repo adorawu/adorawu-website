@@ -98,3 +98,18 @@ p {
   justify-content: center;
   padding: 200px;
 }
+
+
+/* Contact */
+.contact {
+  background-color: #e2d8cc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contact a {
+  font-size: 48px;
+  color:#CEBFAE;
+  text-decoration: none;
+  padding: 64px;
+}

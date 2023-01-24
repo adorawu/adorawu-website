@@ -1,9 +1,6 @@
 html {
   scroll-behavior: smooth;
-}
-
-.page {
-  height: 100%;
+  margin: 0px;
 }
 
 body {
@@ -11,6 +8,7 @@ body {
   flex-direction: column;
   font-family: Arial, Helvetica, sans-serif;
   margin: 0px;
+  height: 100%;
   background-color: #CEBFAE;
 }
 
@@ -74,7 +72,8 @@ p {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 200px 256px 200px 256px;
+  width: 100%;
+  height: 100vh;
 }
 
 /* About me */
@@ -82,7 +81,8 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 56px 0px 128px 0px;
+  height: 100vh;
+  /* padding: 56px 0px 128px 0px; */
 }
 .about-text {
   display: flex;
@@ -103,7 +103,8 @@ p {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 100px 0px 250px 0px;
+  height: 100vh;
+  padding: 32px 0px 0px 0px;
 }
 .project-title {
   text-align: center;

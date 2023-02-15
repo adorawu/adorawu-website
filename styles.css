@@ -189,3 +189,9 @@ p {
   text-decoration: none;
   padding: 64px;
 }
+
+div .nav:hover {
+  background-color: #bdae9a;
+  transition: 0.5s;
+  border-radius: 6px;
+}

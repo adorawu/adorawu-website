@@ -153,7 +153,8 @@ p {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 10% 25%;
+  padding: 5% 25%;
+  text-align: center;
 }
 
 .back-button {

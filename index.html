@@ -14,12 +14,12 @@
 <body>
         <!-- Navigation-->
         <nav class="navbar" id="mainNav">
-            <button class="nav_left" id="Home_Button">HOME</button>
+            <button class="nav_left nav_link" id="Home_Button" data-default-text="HOME">HOME</button>
             <div class="nav_right">
-                <button class="nav_link" id="About_Button">ABOUT</button>
-                <button class="nav_link" id="Experience_Button">EXPERIENCE</button>
-                <button class="nav_link" id="Projects_Button">PROJECTS</button>
-                <button class="nav_link" id="Contact_Button">CONTACT</button>
+                <button class="nav_link" id="About_Button" data-default-text="ABOUT">ABOUT</button>
+                <button class="nav_link" id="Experience_Button" data-default-text="EXPERIENCE">EXPERIENCE</button>
+                <button class="nav_link" id="Projects_Button" data-default-text="PROJECTS">PROJECTS</button>
+                <button class="nav_link" id="Contact_Button" data-default-text="CONTACT">CONTACT</button>
             </div>
         </nav>
         <div class="content">
@@ -87,20 +87,49 @@
 
         <!-- Projects -->
         <div class="projects_page page" id="Projects">
-            <h2 class="project_header header">projects</h2>
-            <div class="project_cards">
-                <div class="project_card one">
-                    <button class="project-button" onclick="location.href='./projects/wordlegenerator.html'">wordle generator</button>
+            <div class="project_dash">
+                <h2 class="project_header header">projects</h2>
+                <div class="project_cards">
+                    <div class="project_card one">
+                        <button class="project_button" id="Wordle_Button" data-default-text="wordle generator">wordle generator</button>
+                    </div>
+                    <div class="project_card two">
+                        <button class="project_button" id="Food_Drive_Button" data-default-text="food drive">food drive</button>
+                    </div>
+                    <div class="project_card three">
+                        <button class="project_button" id="Piano_Game_Button" data-default-text="piano game&emsp;-&emsp;featured!">piano game&ensp;-&ensp;featured!</button>
+                    </div>
+                    <div class="project_card four">
+                        <button class="project_button" id="Portfolio_Button" data-default-text="portfolio">portfolio</button>
+                    </div>
                 </div>
-                <div class="project_card two">
-                    <button class="project-button" onclick="location.href='./projects/fooddrive.html'">food drive</button>
-                </div>
-                <div class="project_card three">
-                    <button class="project-button" onclick="location.href='./projects/functionalpianogame.html'">functional piano game</button>
-                </div>
-                <div class="project_card four">
-                    <button class="project-button" onclick="location.href='./projects/portfolio.html'">portfolio</button>
-                </div>
+            </div>
+            <div class="webpage" id="Food_Drive">
+                <h2 class="header">food drive</h2>
+                <p class="project_text">Devised a non-profit website that connected restaurants and grocery stores with extra food to charities.
+                    Used React and JavaScript for the front-end and Firebase to store user information and data. Programmed in 12 hours as 
+                    part of Freetail Hackers Hack for Humanity.
+                </p>
+                <img src="food.PNG" width="600">
+            </div>
+            <div class="webpage" id="Piano_Game">
+                <h2 class="header">piano game</h2>
+                <p class="project_text">Developed a memory-based web browser game using the framework PhaserJS featuring a functional piano with keys 
+                    bound to keyboard keys. Also drew all of the artwork and sprites using Pixil Art. Programmed 
+                    collaboratively in 24 hours as part of HackTX 2022!
+                </p>
+                <iframe src="/piano/index.html" height="450" width="600" frameBorder="0">game not available</iframe> 
+            </div>
+            <div class="webpage" id="Portfolio">
+                <h2 class="header">online portfolio</h2>
+                <p class="project_text">I made this website to introduce myself and showcase my projects. 
+                    Conceptualized front-end interface using Figma and created using CSS, HTML, and jquery.
+                </p>
+            </div>
+            <div class="webpage" id="Wordle">
+                <h2 class="header">wordle generator</h2>
+                <p class="project_text">Constructed a version of the popular word game Wordle where players must guess a five-letter word within 6
+                guesses, using hints from previous guesses. Also implemented an algorithm to find all possible guesses based on known letters</p>
             </div>
         </div>
 

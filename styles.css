@@ -57,6 +57,11 @@ button {
   border: none;
 }
 
+a:hover, button:hover {
+  opacity: 0.5;
+  transition: 0.5s;
+}
+
 button:hover {
   cursor: pointer;
 }
@@ -291,37 +296,39 @@ ol,ul {
   width: 100%;
 }
 
-#Projects > * {
-  width: 50%;
+.project_dash {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  overflow: visible !important;
+}
+
+.project_header {
+  text-align: center;
+  width: 400px;
   margin: 0px 20px;
 }
 
 .project_card {
-  margin: 10px 0px;
+  margin: 10px 20px;
+  min-width: 175px;
+  width: 400px;
 }
 
 .webpage {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 10% 25%;
+  position: absolute;
+  top: 15%;
+  left: 40%;
+  margin:20px 80px 20px 20px;
+  z-index: 15;
+  display: none;
 }
 
-.back-button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 160px;
-  padding: 8px 8px;
-  margin:80px 0px;
-  border: none;
-  border-radius: 4px;
-}
-
-.back-button:hover {
-  background-color:#bdae9a;
-  transition: 0.5s;
+.webpage > * {
+  width: 100%;
+  margin: 10px 0px;
 }
 
 .contact_page {

@@ -8,46 +8,55 @@
     <link rel="icon" href="giphy.gif">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="scripts.js"></script>
 </head>
 <body>
         <!-- Navigation-->
         <nav class="navbar" id="mainNav">
-            <div class="nav home left">
-                <a class="nav left" href="#landing">HOME</a>
-            </div>
-            <div class="nav links right">
-                <a class="nav link" href="#about">ABOUT</a>
-                <a class="nav link" href="#projects">PROJECTS</a>
-                <a class="nav link" href="#contact">CONTACT</a>
+            <button class="nav_left" onclick="changePage('Home')">HOME</button>
+            <div class="nav_right">
+                <button class="nav_link" onclick="changePage('About')">ABOUT</button>
+                <button class="nav_link" onclick="changePage('Experience')">EXPERIENCE</button>
+                <button class="nav_link" onclick="changePage('Projects')">PROJECTS</button>
+                <button class="nav_link" onclick="changePage('Contact')">CONTACT</button>
             </div>
         </nav>
+        <div class="content">
+        <div class="frame" id="Frame">
+            <div class="frame_line frame_line-left"></div>
+            <div class="frame_line frame_line-right"></div>
+            <div class="frame_line frame_line-top"></div>
+            <div class="frame_line frame_line-bottom"></div>
 
         <!-- Landing Page-->
-        <div class="landing page" id="landing">
-            <p>hi my name is</p>
-            <h1>ADORA WU</h1>
-        </div>
+        <div class="landing_page" id="Home">
+            <h1 class="landing_page_text">hi. my name is</h1>
+            <br></br>
+            <h1 class="landing_page_name">Adora Wu</h1>
+            <br></br>
+            <h1 class="landing_page_text">Aspiring Software Engineer</h1>
+          </div>
+          
         <!-- About me-->
-        <div class="about page" id="about">
-            <div class="about-text">
-                <h2 class="fancy-text">about me 1</h2>
-                <p class="about-me-text">Howdy! My name is Adora and I'm a student currently attending the 
-                    University of Texas at Austin pursuing computer science. In my free time I enjoy digital art, video games, and trying new recipies! 
+        <div class="about_page" id="About">
+            <div class="about_blurb">
+                <h2 class="about_header">about me</h2>
+                <p class="about_text">I'm a student currently attending the 
+                    University of Texas at Austin pursuing chemistry and computer science. I'm passionate about technology, natural sciences, and design. In my free time I enjoy digital art, video games, and trying new recipies! 
                 </p>
-                <h2>4</h2>
             </div>
-            <div class="about-pic">
-                <img class="headshot" src="headshot.jpg" alt="A picture of me">
+            <div class="about_pic">
+                <img class="headshot" src="headshot.jpg" alt="My headshot"></img>
             </div>
         </div>
 
         <!-- Experience -->
-        <div class="experience page" id="experience">
-
+        <div class="experience_page" id="Experience">
+            <h1>Expeirence here :D</h1>
         </div>
 
         <!-- Projects -->
-        <div class="projects page" id="projects">
+        <div class="projects_page" id="Projects">
             <h2  class="project-title">projects 2</p>
             <div class="project-cards">
                 <div class="project-card one">
@@ -66,10 +75,12 @@
         </div>
 
         <!-- Contact -->
-        <div class="contact page" id="contact">
+        <div class="contact_page" id="Contact">
             <a href="https://www.linkedin.com/in/adora-wu-aa3770200/" class="fa fa-linkedin-square"></a>
             <a href="https://github.com/adorawu" class="fa fa-github-square"></a>
             <a href="mailto:wu.adora@gmail.com" class="fa fa-envelope"></a>
         </div>
+        </div>
+    </div>
 </body>
 </html>

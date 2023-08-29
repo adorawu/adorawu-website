@@ -1,25 +1,13 @@
-var modal = document.getElementById("myModal");
+function changePage(page_name) {
+  var page_names = ["Home", "About", "Experience", "Projects", "Contact"]
+  var curr_page = document.getElementById(page_name)
+  curr_page.style.opacity = 1
+  curr_page.style.zIndex = 10
 
-// Get the button that opens the modal
-var btn = document.getElementById("myBtn");
-
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
-
-// When the user clicks on the button, open the modal
-btn.onclick = function() {
-  modal.style.display = "block";
-  alert("it worked")
-}
-
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-  modal.style.display = "none";
-}
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
+  for ( var i= 0; i < page_names.length; i++) {
+    var page = document.getElementById(page_names[i])
+    if ( page !== curr_page ) {
+      page.style.opacity = 0
+    }
   }
 }

@@ -1,198 +1,252 @@
-html {
-  scroll-behavior: smooth;
-  margin: 0px;
-}
-
-body {
-  display: flex;
-  flex-direction: column;
-  font-family: Arial, Helvetica, sans-serif;
-  margin: 0px;
-  height: 100%;
-  background-color: #CEBFAE;
+@font-face {
+  font-family: "Neue Montreal";
+  font-weight: 200;
+  src: url("NeueMontreal-Light.otf") format("opentype");
 }
 
 @font-face {
-  font-family: "La Obrige";
-  src: url("La\ Obrige.otf") format("opentype");
+  font-family: "Neue Montreal";
+  font-weight: 400;
+  src: url("NeueMontreal-Regular.otf") format("opentype");
 }
 
-h1 {
-  font-family: "La Obrige";
-  color: #F4F4EE;
-  font-size: 64px;
+*{
+  box-sizing: border-box;
   margin: 0;
-  text-align: center;
+  padding: 0;
+  background-color: #e6e6e6;
+  color:#1d1d1d;
+  font-size: 18px;
+  font-family: "Neue Montreal";
+  font-weight: 600;
 }
 
-h2 {
-  font-family: "La Obrige";
-  color: #F4F4EE;
-  font-size: 36px;
-  margin: 8px 0px;
+html {
+  line-height: 1;
+  box-sizing: border-box;
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-user-drag: none;
+  -webkit-tap-highlight-color: rgba(0,0,0,0)
 }
 
 p {
-  color: #F4F4EE;
-  font-weight: bold;
+  font-family: "Neue Montreal";
+  font-weight: 600;
   font-size: 18px;
-  margin: 0;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-weight: inherit;
+  font-size: inherit
+}
+
+a {
+  color: inherit;
+  text-decoration: none
+}
+
+button {
+  border: none;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+ol,ul {
+  list-style: none
+}
+
+:root {
+  --c-bg: hsl(0, 0%, 90%);
+  --c-text: hsl(0, 0%, 10%);
+  --pad: max(20px, 4vmin)
+}
+
+@media(prefers-color-scheme: dark) {
+  :root {
+      --c-bg: hsl(0, 0%, 5%);
+      --c-text: hsl(0, 0%, 95%)
+  }
+}
+
+/* Mask */
+/* .mask {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+}
+.mask_top {
+  top: 0;
+}
+.mask_bottom {
+  bottom: 0;
+}
+.mask_top, .mask_bottom {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: var(--pad);
+  background-color: var(--c-bg);
+  transition-property: background-color;
+  transition-duration: .9s;
+  transition-timing-function: cubic-bezier(0.1, 0.4, 0.2, 1);
+  opacity: .9;
+} */
+
+/* Frame */
+.frame {
+  background-color:hsl(0, 0%, 90%);
+  position: fixed;
+  left: var(--pad);
+  right: var(--pad);
+  top: var(--pad);
+  bottom: var(--pad);
+  z-index: 0;
+}
+.frame_line {
+  position: absolute;
+  background-color: hsl(0, 0%, 10%);
+  opacity: .5;
+}
+.frame_line-left {
+  left: 0;
+  top: 0;
+  width: 1px;
+  height: 100%;
+}
+.frame_line-right {
+  right: 0;
+  top: 0;
+  width: 1px;
+  height: 100%;
+}
+.frame_line-top {
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 1px;
+}
+.frame_line-bottom {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+}
+
+/* Header */
+.navbar {
+  position: fixed;
+  left: calc(var(--pad)*2);
+  top: calc(var(--pad)*2);
+  z-index: 10;
 }
 
 /* NavBar */
-.right {
-  display: flex;
-  justify-content: flex-end;
-  margin: 0px 32px;
-}
-.navbar {
-  display: flex;
-  background-color: #CEBFAE;
-  color: #F4F4EE;
-  align-items: center;
-  padding: 16px 24px;
-  max-height: 56px;
-  justify-content: space-between;
+.nav_left {
+  z-index: 100;
   position: fixed;
-  top: 0;
-  width: 100%;
+  left: calc(var(--pad)*2);
+  top: calc(var(--pad)*2);
 }
 
-.nav {
-  text-decoration: none;
-  color: #F4F4EE;
-  font-size: 24px;
-  font-weight: bold;
-  padding: 16px;
+.nav_right  {
+  z-index: 100;
+  position: fixed;
+  right: calc(var(--pad)*2);
+  top: calc(var(--pad)*2);
+  text-align: right;
 }
+
+.nav_link {
+  padding: 0px 8px;
+}
+
 
 /* Landing Page */
-.landing {
+.landing_page {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  height: 100vh;
-}
-
-/* About me */
-.about {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  /* padding: 56px 0px 128px 0px; */
-}
-.about-text {
-  display: flex;
-  flex-direction: column;
-  max-width: 350px;
-  padding: 16px 16px;
-  letter-spacing: 1px;
-}
-.headshot {
-  height: 500px;
-  padding: 40px 16px;
-}
-
-/* Projects */
-
-.projects {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  padding: 32px 0px 0px 0px;
-}
-.project-title {
-  text-align: center;
-}
-.project-cards {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: stretch;
-  justify-content:  center;
-}
-.project-card {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #e2d8cc;
-  width: 25%;
-  min-width: 200px;
-  height: 300px;
-  border-radius: 16px;
-  width: 21%;
-  margin: 36px auto;
-}
-.project-button {
-  font-size: 24px;
-  font-family: "La Obrige";
-  color: #F4F4EE;
-  text-align: center;
-  letter-spacing: 1px;
-  background-color: transparent;
-  border: none;
   height: 100%;
-  width: 100%;
-  cursor: pointer;  font-weight: bold;
-  margin: 8px 0px;
-  text-decoration: none;
-  border-radius: 16px;
+  opacity: 1;
+  z-index: 10;
 }
 
-.project-button:hover {
-  background-color:#bdae9a;
-  transition: 0.5s;
+.landing_page_text {
+  z-index: 10;
 }
 
-.webpage {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 5% 25%;
-  text-align: center;
-}
-
-.back-button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: "La Obrige";
-  font-weight: bolder;
-  font-size: 24px;
-  width: 160px;
-  padding: 8px 8px;
-  margin:80px 0px;
-  border: none;
-  border-radius: 4px;
-  color:#F4F4EE;
-  background-color: #e2d8cc;
-}
-
-.back-button:hover {
-  background-color:#bdae9a;
-  transition: 0.5s;
-}
-/* Contact */
-.contact {
-  background-color: #e2d8cc;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.contact a {
+.landing_page_name {
   font-size: 48px;
-  color:#CEBFAE;
-  text-decoration: none;
-  padding: 64px;
+  font-family: "Neue Montreal";
+  font-weight: 200;
+  z-index: 10;
 }
 
-div .nav:hover {
-  background-color: #bdae9a;
-  transition: 0.5s;
-  border-radius: 6px;
+/* About Me */
+.about_page {
+  position: absolute;
+  top: 0;
+  padding: 0% 25%;
+  background-color: rgba(0, 0, 0, 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  opacity: 0;
+}
+
+.about_blurb {
+  padding-right: 3%;
+}
+
+.about_header {
+  font-family: "Neue Montreal";
+  font-weight: 200;
+  font-size: 36px;
+}
+
+.headshot {
+  height: 200px;
+  padding-left: 3%;
+}
+
+.experience_page {
+  position: fixed;
+  top: 40%;
+  left: 0;
+  margin: 0% 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+}
+
+.projects_page {
+  position: fixed;
+  top: 40%;
+  left: 0;
+  margin: 0% 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+}
+
+.contact_page {
+  position: fixed;
+  top: 40%;
+  left: 0;
+  margin: 0% 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
 }

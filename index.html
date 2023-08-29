@@ -8,17 +8,18 @@
     <link rel="icon" href="giphy.gif">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="scripts.js"></script>
 </head>
 <body>
         <!-- Navigation-->
         <nav class="navbar" id="mainNav">
-            <button class="nav_left" onclick="changePage('Home')">HOME</button>
+            <button class="nav_left" id="Home_Button">HOME</button>
             <div class="nav_right">
-                <button class="nav_link" onclick="changePage('About')">ABOUT</button>
-                <button class="nav_link" onclick="changePage('Experience')">EXPERIENCE</button>
-                <button class="nav_link" onclick="changePage('Projects')">PROJECTS</button>
-                <button class="nav_link" onclick="changePage('Contact')">CONTACT</button>
+                <button class="nav_link" id="About_Button">ABOUT</button>
+                <button class="nav_link" id="Experience_Button">EXPERIENCE</button>
+                <button class="nav_link" id="Projects_Button">PROJECTS</button>
+                <button class="nav_link" id="Contact_Button">CONTACT</button>
             </div>
         </nav>
         <div class="content">
@@ -29,20 +30,18 @@
             <div class="frame_line frame_line-bottom"></div>
 
         <!-- Landing Page-->
-        <div class="landing_page" id="Home">
-            <h1 class="landing_page_text">hi. my name is</h1>
-            <br></br>
-            <h1 class="landing_page_name">Adora Wu</h1>
-            <br></br>
-            <h1 class="landing_page_text">Aspiring Software Engineer</h1>
+        <div class="home_page page" id="Home">
+            <h1 class="home_page_text">hi. my name is</h1>
+            <h1 class="home_page_name">Adora Wu</h1>
+            <h1 class="home_page_text">aspiring software engineer</h1>
           </div>
           
         <!-- About me-->
-        <div class="about_page" id="About">
+        <div class="about_page page" id="About">
             <div class="about_blurb">
-                <h2 class="about_header">about me</h2>
+                <h2 class="about_header header">about me</h2>
                 <p class="about_text">I'm a student currently attending the 
-                    University of Texas at Austin pursuing chemistry and computer science. I'm passionate about technology, natural sciences, and design. In my free time I enjoy digital art, video games, and trying new recipies! 
+                    University of Texas at Austin pursuing chemistry and computer science. I'm passionate about technology, natural sciences, and design. In my free time I enjoy digital art, video games, and trying new recipes! 
                 </p>
             </div>
             <div class="about_pic">
@@ -51,34 +50,71 @@
         </div>
 
         <!-- Experience -->
-        <div class="experience_page" id="Experience">
-            <h1>Expeirence here :D</h1>
+        <div class="experience_page page" id="Experience">
+            <h2 class="exp_header header">experience</h2>
+            <div class="exp_cards">
+                <div class="exp_card one">
+                    <a href="https://semiconductor.samsung.com/us/sas/" target="_blank" rel="noopener noreferrer" class="exp_link">Samsung Austin Semiconductor</a>
+                    <div class="exp_loc_dates">
+                        <p class="exp_location">Austin, TX</p>
+                        <p class="exp_dates">May 2023 - Aug 2023</p>
+                    </div>
+                    <p class="exp_title">Semiconductor Engineer Intern - Data Science</p>
+                </div>
+                <div class="exp_card two">
+                    <a href="https://fri.cns.utexas.edu/research-streams/supra-sensors" target="_blank" rel="noopener noreferrer" class="exp_link">Supra-molecular Sensors Lab</a>
+                    <div class="exp_loc_dates">
+                        <p class="exp_location">Austin, TX</p>
+                        <p class="exp_dates">Jan 2022 - Dec 2022</p>
+                    </div>
+                    <p class="exp_title">Undergraduate Researcher</p>
+                </div>
+                <div class="exp_card three">
+                    <a href="https://www.shareteaaustin.com/" target="_blank" rel="noopener noreferrer" class="exp_link">Sharetea Austin</a>
+                    <div class="exp_loc_dates">
+                        <p class="exp_location">Austin, TX</p>
+                        <p class="exp_dates">Aug 2021 - Present</p>
+                    </div>
+                    <p class="exp_title">Social Media Manager</p>
+                    <div class="exp_loc_dates">
+                        <p class="exp_location">Austin, TX</p>
+                        <p class="exp_dates">Apr 2019 - Aug 2021</p>
+                    </div>
+                    <p class="exp_title">Shift Lead</p>
+                </div>
+            </div>
         </div>
 
         <!-- Projects -->
-        <div class="projects_page" id="Projects">
-            <h2  class="project-title">projects 2</p>
-            <div class="project-cards">
-                <div class="project-card one">
+        <div class="projects_page page" id="Projects">
+            <h2 class="project_header header">projects</h2>
+            <div class="project_cards">
+                <div class="project_card one">
                     <button class="project-button" onclick="location.href='./projects/wordlegenerator.html'">wordle generator</button>
                 </div>
-                <div class="project-card two">
+                <div class="project_card two">
                     <button class="project-button" onclick="location.href='./projects/fooddrive.html'">food drive</button>
                 </div>
-                <div class="project-card three">
+                <div class="project_card three">
                     <button class="project-button" onclick="location.href='./projects/functionalpianogame.html'">functional piano game</button>
                 </div>
-                <div class="project-card four">
+                <div class="project_card four">
                     <button class="project-button" onclick="location.href='./projects/portfolio.html'">portfolio</button>
                 </div>
             </div>
         </div>
 
         <!-- Contact -->
-        <div class="contact_page" id="Contact">
-            <a href="https://www.linkedin.com/in/adora-wu-aa3770200/" class="fa fa-linkedin-square"></a>
-            <a href="https://github.com/adorawu" class="fa fa-github-square"></a>
-            <a href="mailto:wu.adora@gmail.com" class="fa fa-envelope"></a>
+        <div class="contact_page page" id="Contact">
+            <div class="contact_blurb">
+                <h2 class="contact_header header">contact me</h2>
+                <p>feel free to say hi</p>
+            </div>
+            <div class="contact_icons">
+                <a href="https://www.linkedin.com/in/adora-wu-aa3770200/" class="fa fa-linkedin-square"></a>
+                <a href="https://github.com/adorawu" class="fa fa-github-square"></a>
+                <a href="mailto:wu.adora@gmail.com" class="fa fa-envelope"></a>
+            </div>
         </div>
         </div>
     </div>

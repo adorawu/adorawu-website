@@ -1,13 +1,28 @@
-function changePage(page_name) {
-  var page_names = ["Home", "About", "Experience", "Projects", "Contact"]
-  var curr_page = document.getElementById(page_name)
-  curr_page.style.opacity = 1
-  curr_page.style.zIndex = 10
+$(function (){
+  $('#About, #Experience, #Projects, #Contact').hide();
 
-  for ( var i= 0; i < page_names.length; i++) {
-    var page = document.getElementById(page_names[i])
-    if ( page !== curr_page ) {
-      page.style.opacity = 0
-    }
-  }
-}
+  $('#Home_Button').click(function(){
+      $('#Home').fadeIn(800);
+      $('#About, #Experience, #Projects, #Contact').hide();
+  })
+
+  $('#About_Button').click(function(){
+    $('#About').fadeIn(800);
+    $('#Home, #Experience, #Projects, #Contact').hide();
+  })
+
+    $('#Experience_Button').click(function(){
+      $('#Experience').fadeIn(800);
+      $('#About, #Home, #Projects, #Contact').hide();
+  })
+
+  $('#Projects_Button').click(function(){
+    $('#Projects').fadeIn(800);
+    $('#Home, #Experience, #About, #Contact').hide();
+  })
+
+  $('#Contact_Button').click(function(){
+    $('#Contact').fadeIn(800);
+    $('#Home, #Experience, #About, #Projects').hide();
+  })
+})

@@ -7,7 +7,14 @@
 @font-face {
   font-family: "Neue Montreal";
   font-weight: 400;
-  src: url("NeueMontreal-Regular.otf") format("opentype");
+  src: url("NeueMontreal-Medium.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Neue Montreal";
+  font-style: italic;
+  font-weight: 400;
+  src: url("NeueMontreal-MediumItalic.otf") format("opentype");
 }
 
 *{
@@ -22,7 +29,7 @@
 }
 
 html {
-  line-height: 1;
+  line-height: 1.25;
   box-sizing: border-box;
   -webkit-user-select: none;
   user-select: none;
@@ -168,26 +175,30 @@ ol,ul {
 }
 
 
-/* Landing Page */
-.landing_page {
+/* home Page */
+.home_page {
+  position: absolute;
+  top: 0;
+  padding: 0% 25%;
+  background-color: rgba(0, 0, 0, 0);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100%;
-  opacity: 1;
+  width: 100%;
   z-index: 10;
 }
 
-.landing_page_text {
-  z-index: 10;
+.home_page > * {
+  width: 50%;
+  text-align: center;
 }
 
-.landing_page_name {
+.home_page_name {
   font-size: 48px;
   font-family: "Neue Montreal";
   font-weight: 200;
-  z-index: 10;
 }
 
 /* About Me */
@@ -200,53 +211,139 @@ ol,ul {
   justify-content: center;
   align-items: center;
   height: 100%;
-  opacity: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+.about_page > * {
+  width: 50%;
 }
 
 .about_blurb {
   padding-right: 3%;
 }
 
-.about_header {
+.header {
   font-family: "Neue Montreal";
   font-weight: 200;
-  font-size: 36px;
+  font-size: 48px;
 }
 
 .headshot {
-  height: 200px;
   padding-left: 3%;
+  height: 500px;
 }
 
+/* Experience */
 .experience_page {
-  position: fixed;
-  top: 40%;
-  left: 0;
-  margin: 0% 25%;
+  position: absolute;
+  top: 0;
+  padding: 0% 25%;
+  background-color: rgba(0, 0, 0, 0);
   display: flex;
   justify-content: center;
   align-items: center;
-  opacity: 0;
+  height: 100%;
+  width: 100%;
 }
 
+#Experience > * {
+  width: 50%;
+}
+
+.exp_card {
+  padding: 20px 0px;
+}
+
+.exp_loc_dates {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  font-family: "Neue Montreal";
+  font-style: italic;
+  font-weight: 400;
+  padding: 8px 0px;
+}
+
+.exp_link {
+  font-family: "Neue Montreal";
+  font-size: 28px;
+  margin: 20px 0px;
+}
+
+.exp_title {
+  font-family: "Neue Montreal";
+  font-weight: 600;
+  font-size: 18px;
+  padding-bottom: 10px;
+}
+
+/* Projects */
 .projects_page {
-  position: fixed;
-  top: 40%;
-  left: 0;
-  margin: 0% 25%;
+  position: absolute;
+  top: 0;
+  padding: 0% 25%;
+  background-color: rgba(0, 0, 0, 0);
   display: flex;
   justify-content: center;
   align-items: center;
-  opacity: 0;
+  height: 100%;
+  width: 100%;
+}
+
+#Projects > * {
+  width: 50%;
+  margin: 0px 20px;
+}
+
+.project_card {
+  margin: 10px 0px;
+}
+
+.webpage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10% 25%;
+}
+
+.back-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 160px;
+  padding: 8px 8px;
+  margin:80px 0px;
+  border: none;
+  border-radius: 4px;
+}
+
+.back-button:hover {
+  background-color:#bdae9a;
+  transition: 0.5s;
 }
 
 .contact_page {
-  position: fixed;
-  top: 40%;
-  left: 0;
-  margin: 0% 25%;
+  position: absolute;
+  top: 0;
+  padding: 0% 25%;
+  background-color: rgba(0, 0, 0, 0);
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  opacity: 0;
+  height: 100%;
+  width: 100%;
+}
+
+#Contact > * {
+  width: 50%;
+  text-align: center;
+  padding: 10px 0px;
+}
+
+#Contact a {
+  font-size: 48px;
+  padding: 10px;
 }

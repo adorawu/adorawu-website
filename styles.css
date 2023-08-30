@@ -1,20 +1,20 @@
 @font-face {
   font-family: "Neue Montreal";
   font-weight: 200;
-  src: url("NeueMontreal-Light.otf") format("opentype");
+  src: url("assets/fonts/NeueMontreal-Light.otf") format("opentype");
 }
 
 @font-face {
   font-family: "Neue Montreal";
   font-weight: 400;
-  src: url("NeueMontreal-Medium.otf") format("opentype");
+  src: url("assets/fonts/NeueMontreal-Medium.otf") format("opentype");
 }
 
 @font-face {
   font-family: "Neue Montreal";
   font-style: italic;
   font-weight: 400;
-  src: url("NeueMontreal-MediumItalic.otf") format("opentype");
+  src: url("assets/fonts/NeueMontreal-MediumItalic.otf") format("opentype");
 }
 
 *{

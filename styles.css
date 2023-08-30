@@ -319,16 +319,21 @@ ol,ul {
 
 .webpage {
   position: absolute;
-  top: 15%;
+  top: 8%;
   left: 40%;
-  margin:20px 80px 20px 20px;
+  margin:0px 80px 20px 20px;
   z-index: 15;
   display: none;
 }
 
 .webpage > * {
   width: 100%;
-  margin: 10px 0px;
+  margin: 5px 0px;
+}
+
+.project_tools {
+  font-style: italic;
+  font-size: 16px;
 }
 
 .contact_page {
@@ -353,4 +358,67 @@ ol,ul {
 #Contact a {
   font-size: 48px;
   padding: 10px;
+}
+
+#Resume_Side {
+  transform: rotate(90deg);
+  transform-origin: right bottom;
+  position: fixed;
+  right: calc(var(--pad)*2);
+  bottom: calc(var(--pad)*(1.5));
+  z-index: 20;
+}
+
+#Resume {
+  bottom: 0;
+  position: absolute;
+  bottom: calc(var(--pad)*(2.25));
+  right: calc(var(--pad)*0.75);
+}
+
+#Resume::after {
+  content: "";
+  display: block;
+  width: 1px;
+  height: 120px;
+  margin: 0px auto;
+  background-color: hsla(0, 0%, 40%, 0.842);
+  left: calc(var(--pad)*2);
+  bottom: calc(var(--pad)*(2));
+}
+
+#Email {
+  bottom: 0;
+  position: absolute;
+  bottom: calc(var(--pad)*(5));
+  left: calc(var(--pad)*0.75);
+}
+
+#Email::after {
+    content: "";
+    display: block;
+    width: 1px;
+    height: 180px;
+    margin: 0px auto;
+    background-color: hsla(0, 0%, 40%, 0.842);
+    left: calc(var(--pad)*2);
+    bottom: calc(var(--pad)*(2));
+}
+
+#Email_Side {
+  transform: rotate(-90deg);
+  position: fixed;
+  left: calc(var(--pad)*2);
+  bottom: calc(var(--pad)*(1.5));
+  z-index: 20;
+  transform-origin: left bottom;
+  color: hsl(0, 0%, 10%);
+}
+
+.line {
+  font-family: "Neue Montreal";
+  font-weight: 200;
+  font-style: italic;
+  font-size: 8px;
+  color: #414141;
 }

@@ -42,8 +42,8 @@ $(function (){
   $('#Projects_Button').click(function(){
     if (been_clked == true) {
       $('.project_dash').css({
-        "left": "100px",
-        "width": "500px"})
+        "left": "0%",
+        "width": "100%"})
     }
     been_clked = false
     reset_nav_btns()
@@ -69,8 +69,8 @@ $(function (){
     $(this).text("✦").css("cursor", "default").prop("disabled", true);
     if (!been_clked) {
       $('.project_dash').animate({
-        left: "-=400px",
-        width: "-=150px"
+        left: "-=48%",
+        width: "-=15%"
       }, 1200, function(){
         $('#Food_Drive').fadeIn(800);
         been_clked = true
@@ -87,8 +87,8 @@ $(function (){
     $(this).text("✦").css("cursor", "default").prop("disabled", true);
     if (!been_clked) {
       $('.project_dash').animate({
-        left: "-=400px",
-        width: "-=150px"
+        left: "-=48%",
+        width: "-=15%"
       }, 1200, function(){
         $('#Piano_Game').fadeIn(800);
         been_clked = true
@@ -106,8 +106,8 @@ $(function (){
     $(this).text("✦").css("cursor", "default").prop("disabled", true);
     if (!been_clked) {
       $('.project_dash').animate({
-        left: "-=400px",
-        width: "-=150px"
+        left: "-=48%",
+        width: "-=15%"
       }, 1200, function(){
         $('#Portfolio').fadeIn(800);
         been_clked = true
@@ -125,8 +125,8 @@ $(function (){
     $(this).text("✦").css("cursor", "default").prop("disabled", true);
     if (!been_clked) {
       $('.project_dash').animate({
-        left: "-=400px",
-        width: "-=150px"
+        left: "-=48%",
+        width: "-=15%"
       }, 1200, function(){
         $('#Wordle').fadeIn(800);
         been_clked = true

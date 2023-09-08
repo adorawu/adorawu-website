@@ -23,7 +23,7 @@
   padding: 0;
   background-color: #e6e6e6;
   color:#1d1d1d;
-  font-size: 18px;
+  font-size: 1.25vw;
   font-family: "Neue Montreal";
   font-weight: 600;
 }
@@ -40,7 +40,7 @@ html {
 p {
   font-family: "Neue Montreal";
   font-weight: 600;
-  font-size: 18px;
+  font-size: 1.25vw;
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -201,7 +201,7 @@ ol,ul {
 }
 
 .home_page_name {
-  font-size: 48px;
+  font-size: 3.3vw;
   font-family: "Neue Montreal";
   font-weight: 200;
 }
@@ -231,12 +231,12 @@ ol,ul {
 .header {
   font-family: "Neue Montreal";
   font-weight: 200;
-  font-size: 48px;
+  font-size: 3.3vw;
 }
 
-.headshot {
+img .headshot {
   padding-left: 3%;
-  height: 500px;
+  height: 25%;
 }
 
 /* Experience */
@@ -257,30 +257,30 @@ ol,ul {
 }
 
 .exp_card {
-  padding: 20px 0px;
+  padding: 2% 0%;
 }
 
 .exp_loc_dates {
   display: flex;
   justify-content: space-between;
-  font-size: 14px;
+  font-size: 1vw;
   font-family: "Neue Montreal";
   font-style: italic;
   font-weight: 400;
-  padding: 8px 0px;
+  padding: 1% 0%;
 }
 
 .exp_link {
   font-family: "Neue Montreal";
-  font-size: 28px;
-  margin: 20px 0px;
+  font-size: 2vw;
+  margin: 2% 0%;
 }
 
 .exp_title {
   font-family: "Neue Montreal";
   font-weight: 600;
-  font-size: 18px;
-  padding-bottom: 10px;
+  font-size: 1.25vw;
+  padding-bottom: 1%;
 }
 
 /* Projects */
@@ -301,39 +301,56 @@ ol,ul {
   display: flex;
   justify-content: center;
   align-items: center;
+  min-width: 100%;
   z-index: 10;
   overflow: visible !important;
 }
 
-.project_header {
-  text-align: center;
-  width: 400px;
-  margin: 0px 20px;
+.project_dash > * {
+  margin: 2%;
 }
 
-.project_card {
-  margin: 10px 20px;
-  min-width: 175px;
+/* .project_header {
+  text-align: center;
   width: 400px;
+  margin: 0% 2%;
+} */
+
+.project_card {
+  min-width: 175px;
+}
+
+.project_graphic {
+  height: 50vh;
 }
 
 .webpage {
   position: absolute;
   top: 8%;
   left: 40%;
-  margin:0px 80px 20px 20px;
+  margin:0% 8% 2% 2%;
   z-index: 15;
   display: none;
 }
 
 .webpage > * {
-  width: 100%;
-  margin: 5px 0px;
+  margin: 0.5% 0%;
+}
+
+iframe {
+  -moz-transform: scale(0.75);
+  transform: (0.75);
+  -moz-transform-origin: 0 0;
+  transform-origin: 0 0;
+  -o-transform: scale(0.75);
+  -o-transform-origin: 0 0;
+  -webkit-transform: scale(0.75);
+  -webkit-transform-origin: 0 0;
 }
 
 .project_tools {
   font-style: italic;
-  font-size: 16px;
+  font-size: 1.1vw;
 }
 
 .contact_page {
@@ -352,12 +369,12 @@ ol,ul {
 #Contact > * {
   width: 50%;
   text-align: center;
-  padding: 10px 0px;
+  padding: 1% 0%;
 }
 
 #Contact a {
-  font-size: 48px;
-  padding: 10px;
+  font-size: 3.3vw;
+  padding: 1%;
 }
 
 #Resume_Side {
@@ -373,7 +390,7 @@ ol,ul {
   bottom: 0;
   position: absolute;
   bottom: calc(var(--pad)*(2.25));
-  right: calc(var(--pad)*0.75);
+  right: calc(var(--pad)*1.00);
 }
 
 #Resume::after {
@@ -391,7 +408,8 @@ ol,ul {
   bottom: 0;
   position: absolute;
   bottom: calc(var(--pad)*(5));
-  left: calc(var(--pad)*0.75);
+  left: calc(var(--pad)*1.00);
+  z-index: 100;
 }
 
 #Email::after {
@@ -419,6 +437,6 @@ ol,ul {
   font-family: "Neue Montreal";
   font-weight: 200;
   font-style: italic;
-  font-size: 8px;
+  font-size: 0.5vw;
   color: #414141;
 }

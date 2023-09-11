@@ -413,7 +413,7 @@ img .headshot {
 #Resume {
   bottom: 0;
   position: absolute;
-  bottom: calc(var(--pad)*(2.25));
+  bottom: calc(var(--pad)*(2.65));
   right: calc(var(--pad)*0.75);
 }
 
@@ -421,7 +421,7 @@ img .headshot {
   content: "";
   display: block;
   width: 1px;
-  height: 120px;
+  height: 10vh;
   margin: 0px auto;
   background-color: hsla(0, 0%, 40%, 0.842);
   left: calc(var(--pad)*2);
@@ -431,7 +431,7 @@ img .headshot {
 #Email {
   bottom: 0;
   position: absolute;
-  bottom: calc(var(--pad)*(5));
+  bottom: calc(var(--pad)*(5.75));
   left: calc(var(--pad)*0.75);
   z-index: 100;
 }
@@ -440,7 +440,7 @@ img .headshot {
     content: "";
     display: block;
     width: 1px;
-    height: 180px;
+    height: 16vh;
     margin: 0px auto;
     background-color: hsla(0, 0%, 40%, 0.842);
     left: calc(var(--pad)*2);

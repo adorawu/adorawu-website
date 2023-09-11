@@ -23,7 +23,7 @@
   padding: 0;
   background-color: #e6e6e6;
   color:#1d1d1d;
-  font-size: 1.25vw;
+  font-size: 1.1vw;
   font-family: "Neue Montreal";
   font-weight: 600;
 }
@@ -40,7 +40,7 @@ html {
 p {
   font-family: "Neue Montreal";
   font-weight: 600;
-  font-size: 1.25vw;
+  font-size: 1.1vw;
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -231,7 +231,7 @@ ol,ul {
 .header {
   font-family: "Neue Montreal";
   font-weight: 200;
-  font-size: 3.3vw;
+  font-size: 2.5vw;
 }
 
 img .headshot {
@@ -279,7 +279,7 @@ img .headshot {
 .exp_title {
   font-family: "Neue Montreal";
   font-weight: 600;
-  font-size: 1.25vw;
+  font-size: 1.1vw;
   padding-bottom: 1%;
 }
 
@@ -317,11 +317,15 @@ img .headshot {
 } */
 
 .project_card {
-  min-width: 175px;
+  min-width: 12vw;
+}
+
+.project_cards {
+  width: 12.vw;
 }
 
 .project_graphic {
-  height: 50vh;
+  max-width: 50vw;
 }
 
 .webpage {
@@ -330,6 +334,7 @@ img .headshot {
   left: 40%;
   margin:0% 8% 2% 2%;
   z-index: 15;
+  max-width: 55vw;
   display: none;
 }
 
@@ -337,15 +342,34 @@ img .headshot {
   margin: 0.5% 0%;
 }
 
-iframe {
-  -moz-transform: scale(0.75);
-  transform: (0.75);
+#wrap {
+  max-width: 50vw;
+  height: auto;
+  overflow: hidden;
+}
+
+#scaled-frame {
+  width: 800px;
+  height: 600px;
+  border: 0px;
+}
+
+/* #scaled-frame {
+  zoom: 50vw;
+  -moz-transform: scale(50vw);
+  transform: 50vw;
   -moz-transform-origin: 0 0;
   transform-origin: 0 0;
-  -o-transform: scale(0.75);
+  -o-transform: scale(50vw);
   -o-transform-origin: 0 0;
-  -webkit-transform: scale(0.75);
+  -webkit-transform: scale(50vw);
   -webkit-transform-origin: 0 0;
+} */
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  #scaled-frame {
+    zoom: 1;
+  }
 }
 
 .project_tools {
@@ -390,7 +414,7 @@ iframe {
   bottom: 0;
   position: absolute;
   bottom: calc(var(--pad)*(2.25));
-  right: calc(var(--pad)*1.00);
+  right: calc(var(--pad)*0.75);
 }
 
 #Resume::after {
@@ -408,7 +432,7 @@ iframe {
   bottom: 0;
   position: absolute;
   bottom: calc(var(--pad)*(5));
-  left: calc(var(--pad)*1.00);
+  left: calc(var(--pad)*0.75);
   z-index: 100;
 }
 
@@ -431,12 +455,4 @@ iframe {
   z-index: 20;
   transform-origin: left bottom;
   color: hsl(0, 0%, 10%);
-}
-
-.line {
-  font-family: "Neue Montreal";
-  font-weight: 200;
-  font-style: italic;
-  font-size: 0.5vw;
-  color: #414141;
 }

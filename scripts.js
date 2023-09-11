@@ -1,19 +1,20 @@
 function resize_game() {
-  var window_width = window.innerWidth
-  var ratio = window_width / 800 * 0.4
+  var window_height = window.innerHeight
+  var ratio = window_height / 1000
+  var new_width = 800 * ratio
+  var new_height = 600 * ratio
+  
   $('#scaled-frame').css({
-    "zoom": ratio,
-    // "-moz-transform": scale(ratio),
+    "-moz-transform": "scale(" + ratio + ")",
     "transform": ratio,
    " -moz-transform-origin": "0 0",
     "transform-origin": "0 0",
-    // "-o-transform": scale(ratio),
+    "-o-transform": "scale(" + ratio + ")",
     "-o-transform-origin": "0 0",
-    // "-webkit-transform": scale(ratio),
+    "-webkit-transform": "scale(" + ratio + ")",
     "-webkit-transform-origin": "0 0",
   })
-    var new_width = 800 * ratio
-    var new_height = 600 * ratio
+
   $('#wrap').css ({
     "width": new_width,
     "height": new_height,
@@ -37,9 +38,9 @@ function reset_project_btns(){
 }
 
 $(function (){
+  resize_game();
   $('#About, #Experience, #Projects, #Contact').hide();
   $('#Home_Button').text("✦").css("cursor", "default").prop("disabled", true);
-  resize_game()
 
   $('#Home_Button').click(function(){
     reset_nav_btns()

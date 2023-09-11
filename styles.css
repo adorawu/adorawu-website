@@ -326,6 +326,7 @@ img .headshot {
 
 .project_graphic {
   max-width: 50vw;
+  max-height: 60vh;
 }
 
 .webpage {
@@ -340,12 +341,6 @@ img .headshot {
 
 .webpage > * {
   margin: 0.5% 0%;
-}
-
-#wrap {
-  max-width: 50vw;
-  height: auto;
-  overflow: hidden;
 }
 
 #scaled-frame {

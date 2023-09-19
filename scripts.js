@@ -143,7 +143,7 @@ $(function (){
     }
   })
 
-  $('#Wordle_Button').click(function(){
+  $('#Potluck_Button').click(function(){
     reset_project_btns()
     $('.webpage').hide()
     $(this).text("✦").css("cursor", "default").prop("disabled", true);
@@ -152,13 +152,13 @@ $(function (){
         left: "-=48%",
         width: "-=15%"
       }, 1200, function(){
-        $('#Wordle').fadeIn(800);
+        $('#Potluck').fadeIn(800);
         been_clked = true
       })
     }
 
     else {
-      $('#Wordle').fadeIn(800);
+      $('#Potluck').fadeIn(800);
     }
   })
 

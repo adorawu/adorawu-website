@@ -263,23 +263,27 @@ img .headshot {
 .exp_loc_dates {
   display: flex;
   justify-content: space-between;
-  font-size: 1vw;
-  font-family: "Neue Montreal";
-  font-style: italic;
-  font-weight: 400;
   padding: 1% 0%;
 }
 
+.exp_loc_dates p{
+  font-size: 1.2vw;
+  font-family: "Neue Montreal";
+  font-weight: 200;
+}
+
+
 .exp_link {
   font-family: "Neue Montreal";
-  font-size: 2vw;
+  font-size: 1.8vw;
   margin: 2% 0%;
 }
 
 .exp_title {
   font-family: "Neue Montreal";
-  font-weight: 600;
-  font-size: 1.1vw;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 1.2vw;
   padding-bottom: 1%;
 }
 

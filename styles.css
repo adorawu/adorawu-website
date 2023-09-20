@@ -225,7 +225,12 @@ ol,ul {
 }
 
 .about_blurb {
-  padding-right: 3%;
+  padding-right: 2%;
+  line-height: 1.33;
+}
+
+.about_text {
+  letter-spacing: 0.3px; 
 }
 
 .header {
@@ -345,6 +350,7 @@ img .headshot {
 
 .webpage > * {
   margin: 0.5% 0%;
+  letter-spacing: 0.3px;
 }
 
 #scaled-frame {
